@@ -3,11 +3,15 @@ import express from "express";
 import Stripe from "stripe";
 import {
   getOrderByStripeSession,
+  getOrderItems,
+  getProductById,
   updateOrderPayment,
+  updateOrderPrintfulId,
   clearCart,
   getUserById,
 } from "./db";
 import { notifyOwner } from "./_core/notification";
+import { createPrintfulOrder, isPrintfulConfigured, resolvePrintfulVariantId } from "./printful";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", {
   apiVersion: "2025-03-31.basil" as any,
@@ -110,6 +114,65 @@ async function handleStripeEvent(event: Stripe.Event) {
       }
 
       console.log(`[Stripe Webhook] Order #${order.id} marked as paid`);
+
+      // Submit order to Printful for fulfillment (if configured)
+      if (isPrintfulConfigured() && shippingAddress) {
+        try {
+          const items = await getOrderItems(order.id);
+          const printfulItems = await Promise.all(
+            items.map(async (item) => {
+              const product = await getProductById(item.productId);
+              const size = item.size || "11oz";
+              const printfulVariantId = resolvePrintfulVariantId(
+                product?.printfulVariants as any,
+                size
+              );
+              return {
+                productSlug: product?.slug || "",
+                size,
+                quantity: item.quantity,
+                artworkUrl: product?.artworkUrl || "",
+                printfulVariantId,
+              };
+            })
+          );
+
+          const printfulResult = await createPrintfulOrder({
+            orderId: order.id,
+            items: printfulItems,
+            shippingAddress: {
+              name: shippingAddress.name,
+              line1: shippingAddress.line1,
+              line2: shippingAddress.line2,
+              city: shippingAddress.city,
+              state: shippingAddress.state,
+              postalCode: shippingAddress.postalCode,
+              country: shippingAddress.country,
+            },
+            customerEmail: session.customer_email || order.customerEmail || undefined,
+            totalAmount: order.totalAmount,
+          });
+
+          if (printfulResult) {
+            // Store Printful order ID in our database
+            await updateOrderPrintfulId(order.id, printfulResult.printfulOrderId.toString());
+            console.log(`[Stripe Webhook] Printful order #${printfulResult.printfulOrderId} created for order #${order.id}`);
+            await notifyOwner({
+              title: `Printful Order Created for #${order.id}`,
+              content: `Printful order #${printfulResult.printfulOrderId} has been submitted for fulfillment.\nStatus: ${printfulResult.status}`,
+            });
+          }
+        } catch (printfulErr: any) {
+          console.error(`[Stripe Webhook] Printful order failed for #${order.id}:`, printfulErr.message);
+          await notifyOwner({
+            title: `Printful Order Failed for #${order.id}`,
+            content: `Failed to create Printful order: ${printfulErr.message}\n\nPlease manually submit this order on Printful.`,
+          });
+        }
+      } else {
+        console.log(`[Stripe Webhook] Printful not configured — manual fulfillment required for order #${order.id}`);
+      }
+
       break;
     }
 

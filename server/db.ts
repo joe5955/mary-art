@@ -311,6 +311,12 @@ export async function updateOrderTracking(orderId: number, trackingNumber: strin
   await db.update(orders).set({ trackingNumber, trackingUrl, status: "shipped" as any }).where(eq(orders.id, orderId));
 }
 
+export async function updateOrderPrintfulId(orderId: number, printfulOrderId: string) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(orders).set({ printfulOrderId }).where(eq(orders.id, orderId));
+}
+
 export async function getOrderStats() {
   const db = await getDb();
   if (!db) return { totalOrders: 0, totalRevenue: 0, pendingOrders: 0 };

@@ -6,7 +6,7 @@
 - [x] Product detail page with pricing, size options, and mockup images
 - [x] Shopping cart with add/remove/quantity management
 - [x] Stripe checkout flow for secure payment
-- [ ] Printful API integration for automated order fulfillment (requires user's Printful API key)
+- [x] Printful API integration complete (reads variant IDs from DB, auto-submits orders after payment when PRINTFUL_API_KEY is configured)
 - [x] Order management system tracking customer orders and fulfillment status
 - [x] Admin dashboard for managing products, viewing orders, tracking sales
 - [x] Customer order history and tracking for authenticated users
@@ -24,3 +24,6 @@
 - [x] Verify responsive design across mobile/desktop
 - [x] Full purchase flow end-to-end verification (visual QA + 40 tests passing)
 - [x] Fix Stripe webhook endpoint: return valid JSON with verified:true, register with express.raw before express.json
+- [x] Add printfulOrderId column to orders table for tracking fulfillment
+- [x] Store Printful order ID in database when fulfillment is submitted
+- [x] Add Printful integration tests (configured + unconfigured paths + variant resolution) — 53 tests passing

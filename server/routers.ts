@@ -6,6 +6,7 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { notifyOwner } from "./_core/notification";
+import { isPrintfulConfigured } from "./printful";
 import {
   getAllProducts,
   getProductBySlug,
@@ -332,6 +333,10 @@ export const appRouter = router({
     // Admin: get stats
     stats: adminProcedure.query(async () => {
       return getOrderStats();
+    }),
+    // Admin: check Printful integration status
+    printfulStatus: adminProcedure.query(() => {
+      return { configured: isPrintfulConfigured() };
     }),
     // Check order by session ID (for success page)
     bySession: protectedProcedure
