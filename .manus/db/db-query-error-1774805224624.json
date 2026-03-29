@@ -1,0 +1,16 @@
+{
+  "query": "CREATE TABLE `products` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`slug` varchar(128) NOT NULL,\n\t`title` varchar(256) NOT NULL,\n\t`description` text,\n\t`seoDescription` text,\n\t`artworkUrl` text NOT NULL,\n\t`mockupUrls` json DEFAULT ('[]'),\n\t`basePrice` int NOT NULL DEFAULT 2499,\n\t`printfulVariants` json DEFAULT ('[]'),\n\t`category` varchar(64) DEFAULT 'mug',\n\t`isActive` int NOT NULL DEFAULT 1,\n\t`sortOrder` int NOT NULL DEFAULT 0,\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\t`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n\tCONSTRAINT `products_id` PRIMARY KEY(`id`),\n\tCONSTRAINT `products_slug_unique` UNIQUE(`slug`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user WBfVgvvEUxL2ZXR.d50c9d42f646 --database 5RLxZuwJqkKErXc6UsymQC --execute CREATE TABLE `products` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`slug` varchar(128) NOT NULL,\n\t`title` varchar(256) NOT NULL,\n\t`description` text,\n\t`seoDescription` text,\n\t`artworkUrl` text NOT NULL,\n\t`mockupUrls` json DEFAULT ('[]'),\n\t`basePrice` int NOT NULL DEFAULT 2499,\n\t`printfulVariants` json DEFAULT ('[]'),\n\t`category` varchar(64) DEFAULT 'mug',\n\t`isActive` int NOT NULL DEFAULT 1,\n\t`sortOrder` int NOT NULL DEFAULT 0,\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\t`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n\tCONSTRAINT `products_id` PRIMARY KEY(`id`),\n\tCONSTRAINT `products_slug_unique` UNIQUE(`slug`)\n);",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1064 (42000) at line 1: You have an error in your SQL syntax; check the manual that corresponds to your TiDB version for the right syntax to use line 8 column 33 near \"'[]'),",
+    "\t`basePrice` int NOT NULL DEFAULT 2499,",
+    "\t`printfulVariants` json DEFAULT ('[]'),",
+    "\t`category` varchar(64) DEFAULT 'mug',",
+    "\t`isActive` int NOT NULL DEFAULT 1,",
+    "\t`sortOrder` int NOT NULL DEFAULT 0,",
+    "\t`createdAt` timestamp NOT NULL DEFAULT (now()),",
+    "\t`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,",
+    "\tCONSTRAINT `products_id` PRIMARY KEY(`id"
+  ]
+}

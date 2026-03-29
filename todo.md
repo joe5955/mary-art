@@ -1,0 +1,26 @@
+# Mary Wolford Art - E-Commerce TODO
+
+- [x] Database schema: products, orders, order_items, cart tables
+- [x] Stripe integration setup (add feature + secrets)
+- [x] Product catalog page with grid display of coffee cup designs
+- [x] Product detail page with pricing, size options, and mockup images
+- [x] Shopping cart with add/remove/quantity management
+- [x] Stripe checkout flow for secure payment
+- [ ] Printful API integration for automated order fulfillment (requires user's Printful API key)
+- [x] Order management system tracking customer orders and fulfillment status
+- [x] Admin dashboard for managing products, viewing orders, tracking sales
+- [x] Customer order history and tracking for authenticated users
+- [x] Automated order confirmation emails to customers
+- [x] Fulfillment notifications to owner when new orders placed
+- [x] LLM-generated SEO-optimized product descriptions
+- [x] Hand-drawn sketch aesthetic design (cream paper bg, charcoal lines, imperfect shapes)
+- [x] Playful typography: bold marker-style headers + monospaced typewriter body
+- [x] Responsive design optimized for mobile and desktop
+- [x] Upload Mary's artwork images and generate product mockups
+- [x] Seed initial product catalog with Mary's coffee cup designs
+- [x] Vitest tests for core backend flows (40 tests passing: unit + integration)
+- [x] Fix size-based pricing: 15oz surcharge must be reflected in cart totals and checkout
+- [x] Add LLM-generated SEO product description endpoint (admin feature)
+- [x] Verify responsive design across mobile/desktop
+- [x] Full purchase flow end-to-end verification (visual QA + 40 tests passing)
+- [x] Fix Stripe webhook endpoint: return valid JSON with verified:true, register with express.raw before express.json

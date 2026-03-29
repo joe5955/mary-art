@@ -1,0 +1,14 @@
+{
+  "query": "SHOW TABLES; DESCRIBE products; DESCRIBE users;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user WBfVgvvEUxL2ZXR.d50c9d42f646 --database 5RLxZuwJqkKErXc6UsymQC --execute SHOW TABLES; DESCRIBE products; DESCRIBE users;",
+  "returncode": 1,
+  "logs": [
+    "Tables_in_5RLxZuwJqkKErXc6UsymQC",
+    "__drizzle_migrations",
+    "cartItems",
+    "orderItems",
+    "orders",
+    "users",
+    "ERROR 1146 (42S02) at line 1: Table '5rlxzuwjqkkerxc6usymqc.products' doesn't exist"
+  ]
+}
