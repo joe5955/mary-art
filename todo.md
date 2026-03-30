@@ -27,3 +27,6 @@
 - [x] Add printfulOrderId column to orders table for tracking fulfillment
 - [x] Store Printful order ID in database when fulfillment is submitted
 - [x] Add Printful integration tests (configured + unconfigured paths + variant resolution) — 53 tests passing
+- [x] Research print-on-demand vendors, costs, margins, and full setup process for actual cup sales
+- [ ] Push website code to new private GitHub repo joe5955/mary-wolford-art
+- [ ] Create Google Sheets expense tracker with Website Production, Bookkeeping, Sales, and Summary tabs
