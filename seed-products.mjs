@@ -6,14 +6,13 @@ const db = drizzle(process.env.DATABASE_URL);
 
 const seedProducts = [
   {
-    slug: "coffee-dreamer-mug",
-    title: "Coffee Dreamer",
-    description: "A whimsical folk art painting of a wide-eyed character lost in the bliss of a perfect cup. Bold blue and cream tones with thick, expressive brushstrokes capture that magical first-sip moment. This design celebrates the quiet joy of morning coffee rituals.",
-    seoDescription: "Handmade folk art coffee mug featuring Mary Wolford's 'Coffee Dreamer' painting — bold brushstrokes, vibrant blues, and whimsical charm on premium ceramic.",
-    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_dreamer_mug_40a9e774.webp",
+    slug: "three-mugs-collection",
+    title: "Three Mugs Collection",
+    description: "A vibrant celebration of coffee culture painted in Mary's signature folk art style. Three colorful ceramic mugs with bold outlines and steaming wisps dance across a warm cream background. This design captures the essence of coffee companionship with rich blues, warm yellows, and playful energy. Perfect for coffee lovers who appreciate authentic, hand-painted artistry.",
+    seoDescription: "Folk art coffee mug by Mary Wolford — 'Three Mugs Collection' features vibrant ceramic paintings with bold outlines and warm colors on premium ceramic.",
+    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_three_mugs_32987a33.webp",
     mockupUrls: JSON.stringify([
-      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mug_mockup_dreamer_1-9mf8NKnZbLSzEpP4smFagS.webp",
-      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mug_mockup_dreamer_2-Z4Z6LemBNiLeShCZVK7HJo.webp"
+      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_three_mugs_32987a33.webp"
     ]),
     basePrice: 2495,
     category: "Coffee Mugs",
@@ -21,13 +20,13 @@ const seedProducts = [
     sortOrder: 1,
   },
   {
-    slug: "coffee-swirl-mug",
-    title: "Coffee Swirl",
-    description: "Warm spirals of golden brown and cream dance across this design, evoking the mesmerizing swirl of freshly poured coffee. Mary's signature impasto technique gives this piece a rich, textured feel that translates beautifully onto ceramic.",
-    seoDescription: "Artistic coffee mug with Mary Wolford's 'Coffee Swirl' design — warm golden spirals and folk art charm on premium ceramic, printed on demand.",
-    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mug_mockup_abstract_1-46g9L9CH5XL5Tooiab6JRS.webp",
+    slug: "brunette-beauty",
+    title: "Brunette Beauty",
+    description: "A striking portrait of a stylish woman with flowing auburn hair, bold red lips, and an air of sophistication. She holds a steaming coffee cup with the same confidence and flair she carries. Mary's expressive brushwork and rich color palette bring this modern folk art portrait to life, celebrating the ritual and elegance of the coffee moment.",
+    seoDescription: "Portrait art coffee mug by Mary Wolford — 'Brunette Beauty' features a stylish woman with coffee in folk art style on premium ceramic.",
+    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_brunette_449e7d32.webp",
     mockupUrls: JSON.stringify([
-      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mug_mockup_abstract_1-46g9L9CH5XL5Tooiab6JRS.webp"
+      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_brunette_449e7d32.webp"
     ]),
     basePrice: 2495,
     category: "Coffee Mugs",
@@ -35,13 +34,13 @@ const seedProducts = [
     sortOrder: 2,
   },
   {
-    slug: "garden-bloom-mug",
-    title: "Garden Bloom",
-    description: "A burst of floral energy painted in Mary's distinctive folk style. Bright petals in orange, blue, and cream spring from bold dark outlines, bringing the joy of a wildflower garden to your morning routine.",
-    seoDescription: "Folk art floral coffee mug by Mary Wolford — 'Garden Bloom' features vibrant wildflowers and bold brushwork on premium ceramic.",
-    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mug_mockup_floral_1-itjeJyoGPREPwCSF9AwYne.webp",
+    slug: "blue-eyes-swirl",
+    title: "Blue Eyes Swirl",
+    description: "Mesmerizing blue eyes peer over a coffee cup filled with hypnotic golden-brown swirls. This design captures the trance-like state of coffee contemplation with Mary's bold, expressive style. The contrast between the serene face and the dynamic swirling coffee creates a captivating visual narrative about the transformative power of that perfect cup.",
+    seoDescription: "Artistic coffee mug by Mary Wolford — 'Blue Eyes Swirl' features striking eyes and mesmerizing coffee swirls in folk art style on premium ceramic.",
+    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_blue_eyes_6971dd31.webp",
     mockupUrls: JSON.stringify([
-      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mug_mockup_floral_1-itjeJyoGPREPwCSF9AwYne.webp"
+      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_blue_eyes_6971dd31.webp"
     ]),
     basePrice: 2495,
     category: "Coffee Mugs",
@@ -49,51 +48,37 @@ const seedProducts = [
     sortOrder: 3,
   },
   {
-    slug: "curious-cat-mug",
-    title: "Curious Cat",
-    description: "A charming folk art cat with oversized, soulful eyes peers out from this playful design. Painted in Mary's signature palette of deep blues and warm creams, this mug is perfect for cat lovers and art enthusiasts alike.",
-    seoDescription: "Whimsical cat art coffee mug by Mary Wolford — 'Curious Cat' folk painting with soulful eyes and bold colors on premium ceramic.",
-    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mug_mockup_cat_1-YAXFzCDLJTiUMswYMQJNiJ.webp",
+    slug: "blue-woman-premium",
+    title: "Blue Woman Premium",
+    description: "A bold, imaginative portrait of a woman with striking blue skin, expressive eyes, and vibrant red lips. This premium 15oz design showcases Mary's fearless approach to color and form, celebrating individuality and artistic expression. The larger canvas allows the details of her brushwork to shine, making this a statement piece for collectors of contemporary folk art.",
+    seoDescription: "Premium art coffee mug by Mary Wolford — 'Blue Woman' features bold blue portrait and expressive folk art on 15oz ceramic.",
+    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_blue_woman_afb9fc0a.webp",
     mockupUrls: JSON.stringify([
-      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mug_mockup_cat_1-YAXFzCDLJTiUMswYMQJNiJ.webp"
+      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_blue_woman_afb9fc0a.webp"
     ]),
-    basePrice: 2495,
+    basePrice: 2795,
     category: "Coffee Mugs",
     isActive: 1,
     sortOrder: 4,
   },
   {
-    slug: "midnight-brew-mug",
-    title: "Midnight Brew",
-    description: "Deep indigo and midnight blue tones create a moody, atmospheric scene of a late-night coffee moment. Stars and swirling steam blend together in this dreamy nocturnal painting that turns your evening cup into a cosmic experience.",
-    seoDescription: "Midnight-themed art coffee mug by Mary Wolford — deep blues and starry atmosphere on premium ceramic, printed on demand.",
-    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mug_mockup_night_1-ddAzVEoNaGF2qUNukxtvuy.webp",
+    slug: "blonde-profile-with-bloom",
+    title: "Blonde Profile with Bloom",
+    description: "An elegant profile of a blonde woman gazes thoughtfully to the side, accompanied by a delicate green coffee mug adorned with a small red flower. This intimate composition captures a quiet moment of reflection and grace. Mary's attention to detail and subtle color work create a sophisticated, contemplative mood perfect for those who appreciate understated elegance.",
+    seoDescription: "Elegant portrait coffee mug by Mary Wolford — 'Blonde Profile' features thoughtful portraiture and folk art charm on premium ceramic.",
+    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_blonde_6c2758de.webp",
     mockupUrls: JSON.stringify([
-      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mug_mockup_night_1-ddAzVEoNaGF2qUNukxtvuy.webp"
+      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_blonde_6c2758de.webp"
     ]),
     basePrice: 2495,
     category: "Coffee Mugs",
     isActive: 1,
     sortOrder: 5,
   },
-  {
-    slug: "sunrise-sip-mug",
-    title: "Sunrise Sip",
-    description: "Warm oranges, soft pinks, and golden yellows radiate from this sunrise-inspired design. Mary captures the hopeful energy of dawn breaking over a steaming cup, making this mug the perfect companion for early risers.",
-    seoDescription: "Sunrise art coffee mug by Mary Wolford — warm oranges and golden dawn on premium ceramic, handcrafted folk art printed on demand.",
-    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mug_mockup_sunrise_1-699mekFRWSjsHPcP4SJEJ5.webp",
-    mockupUrls: JSON.stringify([
-      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mug_mockup_sunrise_1-699mekFRWSjsHPcP4SJEJ5.webp"
-    ]),
-    basePrice: 2495,
-    category: "Coffee Mugs",
-    isActive: 1,
-    sortOrder: 6,
-  },
 ];
 
 async function seed() {
-  console.log("Seeding products...");
+  console.log("Seeding products with Mary Wolford's Coffee Mate Girls collection...");
   for (const product of seedProducts) {
     try {
       await db.execute(sql`

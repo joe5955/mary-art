@@ -28,5 +28,8 @@
 - [x] Store Printful order ID in database when fulfillment is submitted
 - [x] Add Printful integration tests (configured + unconfigured paths + variant resolution) — 53 tests passing
 - [x] Research print-on-demand vendors, costs, margins, and full setup process for actual cup sales
-- [ ] Push website code to new private GitHub repo joe5955/mary-wolford-art
-- [ ] Create Google Sheets expense tracker with Website Production, Bookkeeping, Sales, and Summary tabs
+- [x] Push website code to new private GitHub repo joe5955/mary-wolford-art
+- [x] Create Google Sheets expense tracker with Website Production, Bookkeeping, Sales, and Summary tabs
+- [x] Update product catalog with Mary's actual "Coffee Mate Girls" artwork paintings (5 real designs)
+- [x] Replace AI-generated mockups with real artwork images
+- [x] Update product names and descriptions to match the collection
