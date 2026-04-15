@@ -27,9 +27,10 @@ export default function Home() {
                 ~ original folk art ~
               </p>
               <h1 className="font-sketch text-5xl md:text-7xl leading-tight mb-4">
-                Art You Can
+                Your Morning
                 <br />
-                <span className="text-[oklch(0.55_0.15_250)]">Sip From</span>
+                Deserves{" "}
+                <span className="text-[oklch(0.55_0.15_250)]">Original Art</span>
               </h1>
               <p className="font-typewriter text-base text-muted-foreground max-w-md mb-6 leading-relaxed">
                 Each mug features an original painting by Mary Wolford, printed on demand just for you. Bold brushstrokes, vibrant colors, and a story in every cup.
@@ -46,6 +47,9 @@ export default function Home() {
                   </Button>
                 </Link>
               </div>
+              <p className="font-typewriter text-xs text-muted-foreground mt-3 flex items-center gap-1.5">
+                <Truck className="h-3.5 w-3.5" /> Free shipping on orders over $50
+              </p>
             </motion.div>
 
             <motion.div

@@ -35,3 +35,5 @@
 - [x] Update product names and descriptions to match the collection
 - [x] Generate new hero banner mockup showing all 5 Coffee Mate Girls cups
 - [x] Update website hero image with the new mockup
+- [x] Change hero tagline to 'Your Morning Deserves Original Art'
+- [x] Add 'Free shipping on orders over $50' near the CTA button
