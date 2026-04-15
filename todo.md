@@ -33,3 +33,5 @@
 - [x] Update product catalog with Mary's actual "Coffee Mate Girls" artwork paintings (5 real designs)
 - [x] Replace AI-generated mockups with real artwork images
 - [x] Update product names and descriptions to match the collection
+- [x] Generate new hero banner mockup showing all 5 Coffee Mate Girls cups
+- [x] Update website hero image with the new mockup

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Palette, Truck, Heart, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 
-const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/hero_banner-5G3xoVQJtdPWGyyG9bHkQJ.webp";
+const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/hero_banner_coffee_mate-WkPy6Yh8AQ7WbVve6dGPQS.webp";
 const ARTIST_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/artist_portrait-4LWq9LdafoHpvh5ggP8B2v.webp";
 
 export default function Home() {
