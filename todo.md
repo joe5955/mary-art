@@ -37,3 +37,6 @@
 - [x] Update website hero image with the new mockup
 - [x] Change hero tagline to 'Your Morning Deserves Original Art'
 - [x] Add 'Free shipping on orders over $50' near the CTA button
+- [x] Generate realistic 3D mug mockups for all 5 Coffee Mate Girls designs
+- [x] Update product catalog database with new mockup image URLs
+- [x] Update Shop, Home, and ProductDetail pages for square mockup display

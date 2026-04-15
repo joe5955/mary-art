@@ -12,7 +12,7 @@ const seedProducts = [
     seoDescription: "Folk art coffee mug by Mary Wolford — 'Three Mugs Collection' features vibrant ceramic paintings with bold outlines and warm colors on premium ceramic.",
     artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_three_mugs_32987a33.webp",
     mockupUrls: JSON.stringify([
-      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_three_mugs_32987a33.webp"
+      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mockup_three_mugs-2NdzdYxxvMPu38XynpMyjS.webp"
     ]),
     basePrice: 2495,
     category: "Coffee Mugs",
@@ -26,7 +26,7 @@ const seedProducts = [
     seoDescription: "Portrait art coffee mug by Mary Wolford — 'Brunette Beauty' features a stylish woman with coffee in folk art style on premium ceramic.",
     artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_brunette_449e7d32.webp",
     mockupUrls: JSON.stringify([
-      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_brunette_449e7d32.webp"
+      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mockup_brunette-Q5TmtWmdWFSb5BhpxhWuKt.webp"
     ]),
     basePrice: 2495,
     category: "Coffee Mugs",
@@ -40,7 +40,7 @@ const seedProducts = [
     seoDescription: "Artistic coffee mug by Mary Wolford — 'Blue Eyes Swirl' features striking eyes and mesmerizing coffee swirls in folk art style on premium ceramic.",
     artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_blue_eyes_6971dd31.webp",
     mockupUrls: JSON.stringify([
-      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_blue_eyes_6971dd31.webp"
+      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mockup_blue_eyes-YHtTghaQndkKxAs9Lgfqai.webp"
     ]),
     basePrice: 2495,
     category: "Coffee Mugs",
@@ -54,7 +54,7 @@ const seedProducts = [
     seoDescription: "Premium art coffee mug by Mary Wolford — 'Blue Woman' features bold blue portrait and expressive folk art on 15oz ceramic.",
     artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_blue_woman_afb9fc0a.webp",
     mockupUrls: JSON.stringify([
-      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_blue_woman_afb9fc0a.webp"
+      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mockup_blue_woman-JwuGeNwzMMZZfeqpLoBunV.webp"
     ]),
     basePrice: 2795,
     category: "Coffee Mugs",
@@ -68,7 +68,7 @@ const seedProducts = [
     seoDescription: "Elegant portrait coffee mug by Mary Wolford — 'Blonde Profile' features thoughtful portraiture and folk art charm on premium ceramic.",
     artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_blonde_6c2758de.webp",
     mockupUrls: JSON.stringify([
-      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_mate_blonde_6c2758de.webp"
+      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mockup_blonde-JzzRc4qCZ3tRiqSdk3o95p.webp"
     ]),
     basePrice: 2495,
     category: "Coffee Mugs",
@@ -78,7 +78,7 @@ const seedProducts = [
 ];
 
 async function seed() {
-  console.log("Seeding products with Mary Wolford's Coffee Mate Girls collection...");
+  console.log("Seeding products with Mary Wolford's Coffee Mate Girls collection (3D mockups)...");
   for (const product of seedProducts) {
     try {
       await db.execute(sql`

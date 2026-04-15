@@ -118,7 +118,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[1, 2, 3, 4].map((i) => (
                 <div key={i} className="sketch-border-light p-3 animate-pulse">
-                  <div className="aspect-[4/3] bg-muted rounded-sm mb-3" />
+                  <div className="aspect-square bg-muted rounded-sm mb-3" />
                   <div className="h-5 bg-muted rounded w-3/4 mb-2" />
                   <div className="h-4 bg-muted rounded w-1/4" />
                 </div>
@@ -138,11 +138,11 @@ export default function Home() {
                   >
                     <Link href={`/shop/${product.slug}`}>
                       <div className="group sketch-border-light p-3 hover:sketch-border transition-all duration-200 cursor-pointer">
-                        <div className="aspect-[4/3] overflow-hidden rounded-sm mb-3">
+                        <div className="aspect-square overflow-hidden rounded-sm mb-3 bg-white">
                           <img
                             src={imgUrl}
                             alt={product.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                             loading="lazy"
                           />
                         </div>

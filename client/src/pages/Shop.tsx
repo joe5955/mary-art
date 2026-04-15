@@ -40,11 +40,11 @@ export default function Shop() {
                 >
                   <Link href={`/shop/${product.slug}`}>
                     <div className="group sketch-border-light p-4 hover:sketch-border transition-all duration-200 cursor-pointer">
-                      <div className="aspect-[4/3] overflow-hidden rounded-sm mb-4">
+                      <div className="aspect-square overflow-hidden rounded-sm mb-4 bg-white">
                         <img
                           src={imgUrl}
                           alt={product.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                           loading="lazy"
                         />
                       </div>
