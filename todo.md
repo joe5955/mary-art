@@ -42,3 +42,7 @@
 - [x] Update Shop, Home, and ProductDetail pages for square mockup display
 - [x] Replace AI-generated artist portrait with real photo of Mary Wolford
 - [x] Rename art style from 'folk art' to 'pop art' across entire site
+- [x] Create three new pop art coffee cup designs (Golden Gaze, Midnight Mystique, Coffee Bloom)
+- [x] Generate matching tote bag mockups for all three new cup designs
+- [x] Generate matching art print mockups for all three new cup designs
+- [x] Add tote bags and art prints to product catalog (6 new merchandise products)

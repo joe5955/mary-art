@@ -75,10 +75,136 @@ const seedProducts = [
     isActive: 1,
     sortOrder: 5,
   },
+  {
+    slug: "golden-gaze",
+    title: "Golden Gaze",
+    description: "A striking pop art portrait of a woman with emerald green eyes and flowing golden blonde hair, rendered in Mary's signature hand-drawn style. She holds a steaming coffee cup with graceful confidence. The design features warm yellows, deep teals, and burnt orange accents against a cream background with charcoal dashed details. Bold black outlines and organic shapes capture the essence of artistic coffee appreciation.",
+    seoDescription: "Pop art coffee mug by Mary Wolford — 'Golden Gaze' features emerald eyes and flowing blonde hair in vibrant pop art style on premium ceramic.",
+    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/pop_art_cup_style1_no_text-nwjxoHRwvvGGVzk8FFVnJY.png",
+    mockupUrls: JSON.stringify([
+      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/pop_art_cup_style1_no_text-9yc6qPAKY45pCc3XMks7m8.webp"
+    ]),
+    basePrice: 2495,
+    category: "Coffee Mugs",
+    isActive: 1,
+    sortOrder: 6,
+  },
+  {
+    slug: "midnight-mystique",
+    title: "Midnight Mystique",
+    description: "A bold and expressive pop art portrait featuring a woman with striking deep purple-blue skin, dramatic red lips, and captivating eyes accented with gold. This design showcases Mary's fearless approach to color and form, celebrating individuality through vibrant jewel tones—deep plum, crimson, and gold—against a cream background. Hand-drawn with thick charcoal outlines and organic shapes.",
+    seoDescription: "Pop art coffee mug by Mary Wolford — 'Midnight Mystique' features bold purple portrait with dramatic red lips in expressive pop art style on premium ceramic.",
+    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/pop_art_cup_style2_no_text-EoMRcWC7cxXXgZT8iihR26.png",
+    mockupUrls: JSON.stringify([
+      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/pop_art_cup_style2_no_text-epLCT4dPcroaPCECE63DWj.webp"
+    ]),
+    basePrice: 2495,
+    category: "Coffee Mugs",
+    isActive: 1,
+    sortOrder: 7,
+  },
+  {
+    slug: "coffee-bloom",
+    title: "Coffee Bloom",
+    description: "An elegant pop art composition featuring a woman's profile in soft rose and coral tones, with flowing hair that gracefully transforms into organic coffee swirls in warm browns and golds. Mary's hand-drawn aesthetic shines through bold black outlines, charcoal details, and imperfect shapes. The cream background with dashed decorative elements completes this sophisticated, contemplative design.",
+    seoDescription: "Pop art coffee mug by Mary Wolford — 'Coffee Bloom' features flowing profile with coffee swirls in rose, coral, and gold pop art style on premium ceramic.",
+    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/pop_art_cup_style3_no_text-gSy83BAsAs9LqUkGXKJWBY.png",
+    mockupUrls: JSON.stringify([
+      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/pop_art_cup_style3_no_text-fAmDLBMRPCAfFZSJdDfi8U.webp"
+    ]),
+    basePrice: 2495,
+    category: "Coffee Mugs",
+    isActive: 1,
+    sortOrder: 8,
+  },
+  {
+    slug: "golden-gaze-tote",
+    title: "Golden Gaze Tote Bag",
+    description: "Carry your coffee culture in style with this premium canvas tote bag featuring Mary Wolford's 'Golden Gaze' pop art design. The striking portrait of a woman with emerald green eyes and flowing golden hair brings artistic flair to everyday use. Perfect for coffee lovers, art enthusiasts, and anyone who appreciates bold, hand-drawn pop art aesthetics.",
+    seoDescription: "Pop art tote bag by Mary Wolford — 'Golden Gaze' canvas tote with emerald eyes and golden hair design.",
+    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/pop_art_cup_style1_no_text-nwjxoHRwvvGGVzk8FFVnJY.png",
+    mockupUrls: JSON.stringify([
+      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/golden_gaze_tote_bag-QsTTzQMRJmo63ToSVZZYhK.webp"
+    ]),
+    basePrice: 1995,
+    category: "Tote Bags",
+    isActive: 1,
+    sortOrder: 9,
+  },
+  {
+    slug: "golden-gaze-print",
+    title: "Golden Gaze Art Print",
+    description: "Bring gallery-quality pop art into your home with this premium art print of Mary Wolford's 'Golden Gaze' design. Printed on high-quality cream paper with vibrant colors that capture the hand-drawn aesthetic and bold personality of the original artwork. Perfect for framing and displaying in any space.",
+    seoDescription: "Pop art print by Mary Wolford — 'Golden Gaze' premium art print on cream paper.",
+    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/pop_art_cup_style1_no_text-nwjxoHRwvvGGVzk8FFVnJY.png",
+    mockupUrls: JSON.stringify([
+      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/golden_gaze_art_print-T4xCvVhz7tbTQzLXLg5e3f.webp"
+    ]),
+    basePrice: 1495,
+    category: "Art Prints",
+    isActive: 1,
+    sortOrder: 10,
+  },
+  {
+    slug: "midnight-mystique-tote",
+    title: "Midnight Mystique Tote Bag",
+    description: "Make a bold statement with this stunning canvas tote bag featuring Mary Wolford's 'Midnight Mystique' pop art design. The striking portrait with deep purple-blue tones and dramatic red lips showcases Mary's fearless approach to color and form. An eye-catching accessory for art lovers and coffee enthusiasts alike.",
+    seoDescription: "Pop art tote bag by Mary Wolford — 'Midnight Mystique' canvas tote with purple portrait and gold accents.",
+    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/pop_art_cup_style2_no_text-EoMRcWC7cxXXgZT8iihR26.png",
+    mockupUrls: JSON.stringify([
+      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/midnight_mystique_tote_bag-dMYQdx6GgJS8WAnbjfexaL.webp"
+    ]),
+    basePrice: 1995,
+    category: "Tote Bags",
+    isActive: 1,
+    sortOrder: 11,
+  },
+  {
+    slug: "midnight-mystique-print",
+    title: "Midnight Mystique Art Print",
+    description: "Elevate your space with this captivating art print of Mary Wolford's 'Midnight Mystique' design. The bold pop art portrait with jewel tones and expressive features is printed on premium cream paper, capturing every detail of Mary's hand-drawn artistry. A stunning focal point for any room.",
+    seoDescription: "Pop art print by Mary Wolford — 'Midnight Mystique' premium art print with purple portrait.",
+    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/pop_art_cup_style2_no_text-EoMRcWC7cxXXgZT8iihR26.png",
+    mockupUrls: JSON.stringify([
+      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/midnight_mystique_art_print-HrX4fKk6u2ud4imR435rUF.webp"
+    ]),
+    basePrice: 1495,
+    category: "Art Prints",
+    isActive: 1,
+    sortOrder: 12,
+  },
+  {
+    slug: "coffee-bloom-tote",
+    title: "Coffee Bloom Tote Bag",
+    description: "Embrace elegance with this beautiful canvas tote bag featuring Mary Wolford's 'Coffee Bloom' pop art design. The graceful profile with flowing hair transforming into coffee swirls creates a sophisticated, contemplative mood. Perfect for carrying your daily essentials with artistic style.",
+    seoDescription: "Pop art tote bag by Mary Wolford — 'Coffee Bloom' canvas tote with flowing profile and coffee swirls.",
+    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/pop_art_cup_style3_no_text-gSy83BAsAs9LqUkGXKJWBY.png",
+    mockupUrls: JSON.stringify([
+      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_bloom_tote_bag-QY362L59dPPLz5JxAeJRTe.webp"
+    ]),
+    basePrice: 1995,
+    category: "Tote Bags",
+    isActive: 1,
+    sortOrder: 13,
+  },
+  {
+    slug: "coffee-bloom-print",
+    title: "Coffee Bloom Art Print",
+    description: "Add a touch of artistic sophistication with this elegant art print of Mary Wolford's 'Coffee Bloom' design. The composition with rose and coral tones, flowing hair, and coffee swirls is printed on premium cream paper, creating a gallery-quality piece perfect for any art lover's collection.",
+    seoDescription: "Pop art print by Mary Wolford — 'Coffee Bloom' premium art print with flowing profile and coffee swirls.",
+    artworkUrl: "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/pop_art_cup_style3_no_text-gSy83BAsAs9LqUkGXKJWBY.png",
+    mockupUrls: JSON.stringify([
+      "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/coffee_bloom_art_print-m6cvdiVWYNRi2cie6Q5Jjq.webp"
+    ]),
+    basePrice: 1495,
+    category: "Art Prints",
+    isActive: 1,
+    sortOrder: 14,
+  },
 ];
 
 async function seed() {
-  console.log("Seeding products with Mary Wolford's Coffee Mate Girls collection (3D mockups)...");
+  console.log("Seeding products: Coffee Mugs, Tote Bags, and Art Prints from Mary Wolford's collection...");
   for (const product of seedProducts) {
     try {
       await db.execute(sql`
