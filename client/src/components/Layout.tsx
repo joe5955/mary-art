@@ -147,7 +147,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div>
               <h3 className="font-sketch text-xl mb-3">Mary Wolford Art</h3>
               <p className="font-typewriter text-sm text-muted-foreground leading-relaxed">
-                Original folk art designs on premium coffee cups. Each piece is a functional work of art.
+                Original pop art designs on premium coffee cups. Each piece is a functional work of art.
               </p>
             </div>
             <div>

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
-const ARTIST_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/artist_portrait-4LWq9LdafoHpvh5ggP8B2v.webp";
+const ARTIST_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mary_wolford_real_photo_6063e0d9.jpg";
 
 export default function About() {
   return (
@@ -26,13 +26,13 @@ export default function About() {
             </div>
             <div className="space-y-4">
               <p className="font-typewriter text-sm text-muted-foreground leading-relaxed">
-                Mary Wolford is a folk artist whose bold, expressive paintings have been capturing hearts for over two decades. Working from her sun-filled studio, she creates vibrant pieces that blend thick impasto brushstrokes with a palette of deep blues, warm oranges, and soft creams.
+                Mary Wolford is a pop artist whose bold, expressive paintings have been capturing hearts for over two decades. Working from her sun-filled studio, she creates vibrant pieces that blend thick outlines with a palette of deep blues, warm oranges, and vivid colors.
               </p>
               <p className="font-typewriter text-sm text-muted-foreground leading-relaxed">
                 Her work draws inspiration from everyday life — the warmth of a morning coffee, the expression on a friend's face, the play of light through a kitchen window. Each painting tells a small story, inviting the viewer to slow down and notice the beauty in ordinary moments.
               </p>
               <p className="font-typewriter text-sm text-muted-foreground leading-relaxed">
-                Mary's signature style is immediately recognizable: characters with oversized, soulful eyes, swirling coffee cups, and compositions that feel both playful and deeply personal. Her work has been described as "folk art with a modern soul."
+                Mary's signature style is immediately recognizable: characters with oversized, soulful eyes, swirling coffee cups, and compositions that feel both playful and deeply personal. Her work has been described as "pop art with soul."
               </p>
             </div>
           </div>

@@ -120,7 +120,7 @@ export const appRouter = router({
           messages: [
             {
               role: "system",
-              content: `You are a creative copywriter for an artisan e-commerce store selling coffee mugs featuring original folk art by Mary Wolford. Write compelling, SEO-optimized product descriptions. Return JSON with two fields: "description" (2-3 engaging paragraphs, ~120 words) and "seoDescription" (meta description, max 155 characters). Focus on the artistry, the warmth of handmade feel, and the joy of drinking from a unique piece of art.`,
+              content: `You are a creative copywriter for an artisan e-commerce store selling coffee mugs featuring original pop art by Mary Wolford. Write compelling, SEO-optimized product descriptions. Return JSON with two fields: "description" (2-3 engaging paragraphs, ~120 words) and "seoDescription" (meta description, max 155 characters). Focus on the artistry, the warmth of handmade feel, and the joy of drinking from a unique piece of art.`,
             },
             {
               role: "user",

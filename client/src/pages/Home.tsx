@@ -6,7 +6,7 @@ import { ArrowRight, Palette, Truck, Heart, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/hero_banner_coffee_mate-WkPy6Yh8AQ7WbVve6dGPQS.webp";
-const ARTIST_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/artist_portrait-4LWq9LdafoHpvh5ggP8B2v.webp";
+const ARTIST_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mary_wolford_real_photo_6063e0d9.jpg";
 
 export default function Home() {
   const productsQuery = trpc.products.list.useQuery();
@@ -24,7 +24,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
             >
               <p className="font-typewriter text-sm text-muted-foreground tracking-widest uppercase mb-2">
-                ~ original folk art ~
+                ~ original pop art ~
               </p>
               <h1 className="font-sketch text-5xl md:text-7xl leading-tight mb-4">
                 Your Morning
@@ -179,7 +179,7 @@ export default function Home() {
               </p>
               <h2 className="font-sketch text-3xl md:text-4xl mb-4">Meet Mary Wolford</h2>
               <p className="font-typewriter text-sm text-muted-foreground leading-relaxed mb-4">
-                Mary is a folk artist whose bold, expressive paintings capture the warmth and whimsy of everyday life. Her signature style blends thick impasto brushstrokes with vibrant blues, oranges, and creams, creating pieces that feel both familiar and magical.
+                Mary is a pop artist whose bold, expressive paintings capture the warmth and whimsy of everyday life. Her signature style blends thick outlines with vibrant colors, creating pieces that feel both familiar and magical.
               </p>
               <p className="font-typewriter text-sm text-muted-foreground leading-relaxed mb-6">
                 Now, her original paintings come to life on premium coffee cups, so you can start every morning with a little art in your hands.

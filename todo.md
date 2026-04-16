@@ -40,3 +40,5 @@
 - [x] Generate realistic 3D mug mockups for all 5 Coffee Mate Girls designs
 - [x] Update product catalog database with new mockup image URLs
 - [x] Update Shop, Home, and ProductDetail pages for square mockup display
+- [x] Replace AI-generated artist portrait with real photo of Mary Wolford
+- [x] Rename art style from 'folk art' to 'pop art' across entire site
