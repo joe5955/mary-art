@@ -10,10 +10,42 @@ import { Link } from "wouter";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const SIZES = [
+const MUG_SIZES = [
   { value: "11oz", label: "11 oz — Standard", priceAdd: 0 },
   { value: "15oz", label: "15 oz — Large", priceAdd: 400 },
 ];
+
+type CategoryKey = "Coffee Mugs" | "Tote Bags" | "Art Prints";
+
+const PRODUCT_DETAILS: Record<CategoryKey, string[]> = {
+  "Coffee Mugs": [
+    "Premium white ceramic mug",
+    "Dishwasher and microwave safe",
+    "Vibrant, fade-resistant print",
+    "Printed on demand — made just for you",
+    "Ships within 3-7 business days",
+  ],
+  "Tote Bags": [
+    "Premium natural canvas tote bag",
+    "Sturdy cotton handles",
+    "Spacious interior — perfect for everyday use",
+    "Vibrant, fade-resistant print",
+    "Printed on demand — made just for you",
+    "Ships within 3-7 business days",
+  ],
+  "Art Prints": [
+    "Museum-quality giclée print",
+    "Printed on heavyweight matte paper",
+    "Vibrant, true-to-art color reproduction",
+    "Unframed — ready for your favorite frame",
+    "Printed on demand — made just for you",
+    "Ships within 3-7 business days",
+  ],
+};
+
+function isCategoryKey(cat: string): cat is CategoryKey {
+  return cat in PRODUCT_DETAILS;
+}
 
 export default function ProductDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -57,8 +89,15 @@ export default function ProductDetail() {
 
   const mockups = (product.mockupUrls as string[]) || [];
   const allImages = mockups.length > 0 ? mockups : [product.artworkUrl];
-  const sizeInfo = SIZES.find((s) => s.value === selectedSize) || SIZES[0];
-  const totalPrice = product.basePrice + sizeInfo.priceAdd;
+  const category = product.category || "Coffee Mugs";
+  const isMug = category === "Coffee Mugs";
+
+  // Only mugs have size options with surcharges
+  const sizeInfo = isMug ? (MUG_SIZES.find((s) => s.value === selectedSize) || MUG_SIZES[0]) : null;
+  const totalPrice = product.basePrice + (sizeInfo?.priceAdd || 0);
+
+  // Get category-specific product details
+  const details = isCategoryKey(category) ? PRODUCT_DETAILS[category] : PRODUCT_DETAILS["Coffee Mugs"];
 
   const handleAddToCart = async () => {
     if (!isAuthenticated) {
@@ -69,7 +108,7 @@ export default function ProductDetail() {
       await addToCartMutation.mutateAsync({
         productId: product.id,
         quantity: 1,
-        size: selectedSize,
+        size: isMug ? selectedSize : "standard",
       });
       utils.cart.list.invalidate();
       setJustAdded(true);
@@ -142,27 +181,30 @@ export default function ProductDetail() {
               </div>
             )}
 
-            <div className="border-t border-dashed border-border pt-6 mb-6">
-              <h3 className="font-sketch text-lg mb-3">Select Size</h3>
-              <div className="flex gap-3">
-                {SIZES.map((size) => (
-                  <button
-                    key={size.value}
-                    onClick={() => setSelectedSize(size.value)}
-                    className={`px-4 py-3 rounded-sm font-typewriter text-sm transition-all ${
-                      selectedSize === size.value
-                        ? "sketch-border bg-card font-bold"
-                        : "sketch-border-light hover:bg-secondary"
-                    }`}
-                  >
-                    {size.label}
-                    {size.priceAdd > 0 && (
-                      <span className="text-muted-foreground ml-1">(+${(size.priceAdd / 100).toFixed(2)})</span>
-                    )}
-                  </button>
-                ))}
+            {/* Size selector — only for mugs */}
+            {isMug && (
+              <div className="border-t border-dashed border-border pt-6 mb-6">
+                <h3 className="font-sketch text-lg mb-3">Select Size</h3>
+                <div className="flex gap-3">
+                  {MUG_SIZES.map((size) => (
+                    <button
+                      key={size.value}
+                      onClick={() => setSelectedSize(size.value)}
+                      className={`px-4 py-3 rounded-sm font-typewriter text-sm transition-all ${
+                        selectedSize === size.value
+                          ? "sketch-border bg-card font-bold"
+                          : "sketch-border-light hover:bg-secondary"
+                      }`}
+                    >
+                      {size.label}
+                      {size.priceAdd > 0 && (
+                        <span className="text-muted-foreground ml-1">(+${(size.priceAdd / 100).toFixed(2)})</span>
+                      )}
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
             <Button
               onClick={handleAddToCart}
@@ -185,11 +227,9 @@ export default function ProductDetail() {
             <div className="mt-8 space-y-3 sketch-border-light p-4">
               <h4 className="font-sketch text-base">Product Details</h4>
               <ul className="space-y-1 font-typewriter text-xs text-muted-foreground">
-                <li>- Premium white ceramic mug</li>
-                <li>- Dishwasher and microwave safe</li>
-                <li>- Vibrant, fade-resistant print</li>
-                <li>- Printed on demand — made just for you</li>
-                <li>- Ships within 3-7 business days</li>
+                {details.map((detail, i) => (
+                  <li key={i}>- {detail}</li>
+                ))}
               </ul>
             </div>
           </motion.div>

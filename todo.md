@@ -46,3 +46,10 @@
 - [x] Generate matching tote bag mockups for all three new cup designs
 - [x] Generate matching art print mockups for all three new cup designs
 - [x] Add tote bags and art prints to product catalog (6 new merchandise products)
+- [x] Verify all product images are loading correctly on the live site
+- [x] Verify pricing is visible on product listings and detail pages
+- [ ] Test full checkout flow end-to-end (add to cart → checkout → payment) — partial: cart verified, Stripe redirect needs user testing
+- [ ] Advise on custom domain setup (replace manus.space subdomain)
+- [x] Fix product detail page: tote bags/art prints show mug-specific details (ceramic mug, dishwasher safe, oz sizes)
+- [x] Remove 6 old placeholder products from database (Coffee Dreamer, Coffee Swirl, Garden Bloom, Curious Cat, Midnight Brew, Sunrise Sip)
+- [x] Fix cart order summary price display mismatch

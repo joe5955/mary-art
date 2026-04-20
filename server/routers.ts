@@ -214,9 +214,15 @@ export const appRouter = router({
         throw new TRPCError({ code: "BAD_REQUEST", message: "Cart is empty" });
       }
 
-      // Size surcharges
+      // Size surcharges — only apply to Coffee Mugs
       const SIZE_SURCHARGE: Record<string, number> = { "11oz": 0, "15oz": 400 };
-      const getItemPrice = (item: typeof items[0]) => item.product.basePrice + (SIZE_SURCHARGE[item.size || "11oz"] || 0);
+      const isMug = (item: typeof items[0]) => item.product.category === "Coffee Mugs";
+      const getItemPrice = (item: typeof items[0]) => {
+        if (isMug(item)) {
+          return item.product.basePrice + (SIZE_SURCHARGE[item.size || "11oz"] || 0);
+        }
+        return item.product.basePrice;
+      };
 
       // Calculate total
       const totalAmount = items.reduce((sum, item) => sum + getItemPrice(item) * item.quantity, 0);
@@ -241,20 +247,25 @@ export const appRouter = router({
       );
 
       // Build Stripe line items
-      const lineItems = items.map((item) => ({
-        price_data: {
-          currency: "usd",
-          product_data: {
-            name: item.product.title,
-            description: `Size: ${item.size || "11oz"}`,
-            images: item.product.mockupUrls && (item.product.mockupUrls as string[]).length > 0
-              ? [(item.product.mockupUrls as string[])[0]]
-              : [item.product.artworkUrl],
+      const lineItems = items.map((item) => {
+        const descParts: string[] = [];
+        if (item.product.category) descParts.push(item.product.category);
+        if (isMug(item)) descParts.push(`Size: ${item.size || "11oz"}`);
+        return {
+          price_data: {
+            currency: "usd",
+            product_data: {
+              name: item.product.title,
+              description: descParts.join(" — ") || item.product.category || "Art product",
+              images: item.product.mockupUrls && (item.product.mockupUrls as string[]).length > 0
+                ? [(item.product.mockupUrls as string[])[0]]
+                : [item.product.artworkUrl],
+            },
+            unit_amount: getItemPrice(item),
           },
-          unit_amount: getItemPrice(item),
-        },
-        quantity: item.quantity,
-      }));
+          quantity: item.quantity,
+        };
+      });
 
       const origin = ctx.req.headers.origin || `${ctx.req.protocol}://${ctx.req.get("host")}`;
 

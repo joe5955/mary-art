@@ -41,10 +41,20 @@ export default function Cart() {
   }
 
   const items = cartQuery.data || [];
-  const getItemPrice = (item: typeof items[0]) => {
-    const surcharge = SIZE_SURCHARGE[item.size || "11oz"] || 0;
-    return item.product.basePrice + surcharge;
+
+  const isMugCategory = (item: typeof items[0]) => {
+    return item.product.category === "Coffee Mugs";
   };
+
+  const getItemPrice = (item: typeof items[0]) => {
+    // Only apply size surcharge for mugs
+    if (isMugCategory(item)) {
+      const surcharge = SIZE_SURCHARGE[item.size || "11oz"] || 0;
+      return item.product.basePrice + surcharge;
+    }
+    return item.product.basePrice;
+  };
+
   const total = items.reduce((sum, item) => sum + getItemPrice(item) * item.quantity, 0);
 
   const handleUpdateQty = async (id: number, newQty: number) => {
@@ -78,6 +88,11 @@ export default function Cart() {
     }
   };
 
+  const getSizeLabel = (item: typeof items[0]) => {
+    if (!isMugCategory(item)) return null;
+    return item.size === "15oz" ? "15 oz" : "11 oz";
+  };
+
   return (
     <Layout>
       <div className="container py-8">
@@ -98,7 +113,7 @@ export default function Cart() {
             <ShoppingBag className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
             <p className="font-sketch text-2xl text-muted-foreground mb-2">Your cart is empty</p>
             <p className="font-typewriter text-sm text-muted-foreground mb-6">
-              Time to find your perfect mug!
+              Time to find your perfect piece!
             </p>
             <Link href="/shop">
               <Button className="sketch-border bg-foreground text-background font-typewriter text-sm px-6 py-5">
@@ -113,6 +128,7 @@ export default function Cart() {
               {items.map((item, i) => {
                 const mockups = (item.product.mockupUrls as string[]) || [];
                 const imgUrl = mockups[0] || item.product.artworkUrl;
+                const sizeLabel = getSizeLabel(item);
                 return (
                   <motion.div
                     key={item.id}
@@ -132,7 +148,12 @@ export default function Cart() {
                           {item.product.title}
                         </h3>
                       </Link>
-                      <p className="font-typewriter text-xs text-muted-foreground">Size: {item.size}</p>
+                      {sizeLabel && (
+                        <p className="font-typewriter text-xs text-muted-foreground">Size: {sizeLabel}</p>
+                      )}
+                      {!isMugCategory(item) && item.product.category && (
+                        <p className="font-typewriter text-xs text-muted-foreground">{item.product.category}</p>
+                      )}
                       <p className="font-typewriter text-sm text-[oklch(0.55_0.15_250)] mt-1">
                         ${(getItemPrice(item) / 100).toFixed(2)} each
                       </p>
