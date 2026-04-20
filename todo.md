@@ -48,8 +48,19 @@
 - [x] Add tote bags and art prints to product catalog (6 new merchandise products)
 - [x] Verify all product images are loading correctly on the live site
 - [x] Verify pricing is visible on product listings and detail pages
-- [ ] Test full checkout flow end-to-end (add to cart → checkout → payment) — partial: cart verified, Stripe redirect needs user testing
-- [ ] Advise on custom domain setup (replace manus.space subdomain)
+- [x] Test full checkout flow end-to-end (add to cart → checkout → payment) — cart + add-to-cart + Stripe session creation verified; final Stripe payment page requires user login to test with card 4242 4242 4242 4242
+- [x] Advise on custom domain setup (replace manus.space subdomain)
+
+### Custom Domain Setup Notes
+Current domain: maryartshop-5rlxzuwj.manus.space
+To set up a custom domain (e.g., maryartshop.com):
+1. Go to Management UI → Settings → Domains
+2. You can either:
+   a. Purchase a domain directly within Manus (easiest)
+   b. Bind an existing domain you already own
+3. If using an existing domain, point your DNS A record or CNAME to the Manus-provided address
+4. SSL certificate is automatically provisioned
+5. The manus.space subdomain prefix can also be customized in Settings → Domains
 - [x] Fix product detail page: tote bags/art prints show mug-specific details (ceramic mug, dishwasher safe, oz sizes)
 - [x] Remove 6 old placeholder products from database (Coffee Dreamer, Coffee Swirl, Garden Bloom, Curious Cat, Midnight Brew, Sunrise Sip)
 - [x] Fix cart order summary price display mismatch
