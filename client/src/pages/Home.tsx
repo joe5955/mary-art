@@ -6,7 +6,7 @@ import { ArrowRight, Palette, Truck, Heart, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/hero_banner_coffee_mate-WkPy6Yh8AQ7WbVve6dGPQS.webp";
-const ARTIST_IMG = "/manus-storage/mary_brightened_11505bd4.png";
+const ARTIST_IMG = "/manus-storage/mary_contrast_42f31d08.png";
 
 export default function Home() {
   const productsQuery = trpc.products.list.useQuery();

@@ -73,3 +73,5 @@ To set up a custom domain (e.g., maryartshop.com):
 - [x] Verify the live shop page displays all 41 products correctly across mugs, tote bags, and art prints
 - [x] Update shop page collection copy to reflect multi-category catalog (not just mugs)
 - [x] Standardize all art print prices to $24.95 (was $14.95 for 3 older prints)
+- [x] Increase contrast on Mary's photo — looks milky/washed out, needs more punch
+- [x] Add storage proxy for /manus-storage/ paths (required for uploaded images to load)
