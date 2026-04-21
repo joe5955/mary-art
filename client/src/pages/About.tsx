@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
-const ARTIST_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/mary_wolford_real_photo_6063e0d9.jpg";
+const ARTIST_IMG = "/manus-storage/mary_brightened_11505bd4.png";
 
 export default function About() {
   return (

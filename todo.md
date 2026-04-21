@@ -64,3 +64,12 @@ To set up a custom domain (e.g., maryartshop.com):
 - [x] Fix product detail page: tote bags/art prints show mug-specific details (ceramic mug, dishwasher safe, oz sizes)
 - [x] Remove 6 old placeholder products from database (Coffee Dreamer, Coffee Swirl, Garden Bloom, Curious Cat, Midnight Brew, Sunrise Sip)
 - [x] Fix cart order summary price display mismatch
+- [x] Brighten and perk up Mary's photo on the About page (and Home page)
+- [x] Create mug mockups for 9 new paintings (Suave, Hidden Blonde, Elevate, Love Me Do, Strawberry Fields, Lucy in the Sky, Metamorphosis, The Rhododendron Bush, Seascape)
+- [x] Create tote bag mockups for 9 new paintings
+- [x] Create art print mockups for 9 new paintings
+- [x] Add all 27 new products to seed script and database
+- [x] Verify all new products display correctly on the shop page — 41 total products seeded, 53 tests passing
+- [x] Verify the live shop page displays all 41 products correctly across mugs, tote bags, and art prints
+- [x] Update shop page collection copy to reflect multi-category catalog (not just mugs)
+- [x] Standardize all art print prices to $24.95 (was $14.95 for 3 older prints)

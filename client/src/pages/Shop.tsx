@@ -16,7 +16,7 @@ export default function Shop() {
           </p>
           <h1 className="font-sketch text-4xl md:text-5xl">Shop All Designs</h1>
           <p className="font-typewriter text-sm text-muted-foreground mt-2 max-w-lg">
-            Each mug features an original pop art painting by Mary Wolford. Printed on demand on premium ceramic.
+            Original pop art by Mary Wolford — on coffee mugs, tote bags, and art prints. Each piece printed on demand with vibrant, lasting colors.
           </p>
         </div>
 
