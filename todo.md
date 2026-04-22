@@ -75,3 +75,5 @@ To set up a custom domain (e.g., maryartshop.com):
 - [x] Standardize all art print prices to $24.95 (was $14.95 for 3 older prints)
 - [x] Increase contrast on Mary's photo — looks milky/washed out, needs more punch
 - [x] Add storage proxy for /manus-storage/ paths (required for uploaded images to load)
+- [x] Generate lifestyle vignette images (person enjoying coffee mug, carrying tote, print on wall)
+- [x] Add vignette sections between product categories on the shop page to break up the grid
