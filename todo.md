@@ -79,3 +79,6 @@ To set up a custom domain (e.g., maryartshop.com):
 - [x] Add vignette sections between product categories on the shop page to break up the grid
 - [x] Remove AI-generated lifestyle vignettes from shop page (Mary's request)
 - [x] Archive vignette images to /home/ubuntu/webdev-static-assets/archived_vignettes/
+- [x] Remove Golden Gaze, Midnight Mystique, Coffee Bloom products (9 items: mug+tote+print each)
+- [x] Remove 5 Coffee Mate Girls mugs (Blonde Profile, Blue Eyes Swirl, Blue Woman Premium, Brunette Beauty, Three Mugs Collection)
+- [x] Archive all AI-generated product images to designs/archived_ai_products/ on GitHub
