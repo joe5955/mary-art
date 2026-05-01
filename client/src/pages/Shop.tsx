@@ -5,57 +5,6 @@ import { motion } from "framer-motion";
 import { Loader2, Coffee, ShoppingBag, Frame } from "lucide-react";
 import { useMemo } from "react";
 
-const VIGNETTE_COFFEE = "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/vignette_coffee_morning-HrkSN8LhqtgniEv9YDuSEc.webp";
-const VIGNETTE_TOTE = "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/vignette_tote_lifestyle_v2-644EoWL6m7zZzzrCJYnDGX.webp";
-const VIGNETTE_ART = "https://d2xsxph8kpxj0f.cloudfront.net/113311765/5RLxZuwJqkKErXc6UsymQC/vignette_art_wall-bfLCMxjCerFtRQdgfoZThQ.webp";
-
-interface VignetteProps {
-  image: string;
-  alt: string;
-  quote: string;
-  attribution: string;
-  reverse?: boolean;
-}
-
-function LifestyleVignette({ image, alt, quote, attribution, reverse }: VignetteProps) {
-  return (
-    <div className="my-12 md:my-16">
-      <div className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-6 md:gap-10`}>
-        <motion.div
-          className="w-full md:w-3/5 overflow-hidden rounded-sm"
-          initial={{ opacity: 0, x: reverse ? 30 : -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6 }}
-        >
-          <img
-            src={image}
-            alt={alt}
-            className="w-full h-auto object-cover rounded-sm"
-            loading="lazy"
-          />
-        </motion.div>
-        <motion.div
-          className="w-full md:w-2/5 text-center md:text-left"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <div className="border-l-4 border-[oklch(0.55_0.15_250)] pl-5 py-2">
-            <p className="font-sketch text-xl md:text-2xl leading-relaxed italic text-foreground/80">
-              "{quote}"
-            </p>
-            <p className="font-typewriter text-xs tracking-widest uppercase text-muted-foreground mt-3">
-              — {attribution}
-            </p>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-  );
-}
-
 interface ProductCardProps {
   product: {
     id: number;
@@ -172,7 +121,7 @@ export default function Shop() {
             <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
           </div>
         ) : productsQuery.data && productsQuery.data.length > 0 ? (
-          <div>
+          <div className="space-y-14">
             {/* Coffee Mugs Section */}
             {mugs.length > 0 && (
               <CategorySection
@@ -182,14 +131,6 @@ export default function Shop() {
                 products={mugs}
               />
             )}
-
-            {/* Vignette: Morning coffee moment */}
-            <LifestyleVignette
-              image={VIGNETTE_COFFEE}
-              alt="Woman enjoying morning coffee from a pop art mug"
-              quote="There's something special about starting your day with a cup that makes you smile."
-              attribution="The morning ritual"
-            />
 
             {/* Tote Bags Section */}
             {totes.length > 0 && (
@@ -201,15 +142,6 @@ export default function Shop() {
               />
             )}
 
-            {/* Vignette: Tote bag out in the world */}
-            <LifestyleVignette
-              image={VIGNETTE_TOTE}
-              alt="Woman carrying a pop art tote bag at a farmers market"
-              quote="Art shouldn't just hang on a wall — it should go wherever you go."
-              attribution="Take it with you"
-              reverse
-            />
-
             {/* Art Prints Section */}
             {prints.length > 0 && (
               <CategorySection
@@ -219,14 +151,6 @@ export default function Shop() {
                 products={prints}
               />
             )}
-
-            {/* Vignette: Art print on the wall */}
-            <LifestyleVignette
-              image={VIGNETTE_ART}
-              alt="Pop art print hanging in a stylish living room"
-              quote="Every wall deserves a conversation piece. Make yours unforgettable."
-              attribution="Make it yours"
-            />
           </div>
         ) : (
           <div className="text-center py-20">

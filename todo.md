@@ -77,3 +77,5 @@ To set up a custom domain (e.g., maryartshop.com):
 - [x] Add storage proxy for /manus-storage/ paths (required for uploaded images to load)
 - [x] Generate lifestyle vignette images (person enjoying coffee mug, carrying tote, print on wall)
 - [x] Add vignette sections between product categories on the shop page to break up the grid
+- [x] Remove AI-generated lifestyle vignettes from shop page (Mary's request)
+- [x] Archive vignette images to /home/ubuntu/webdev-static-assets/archived_vignettes/
